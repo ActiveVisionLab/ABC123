@@ -9,7 +9,7 @@
   <meta name="author" content="Micahel A. Hobley, Victor A. Prisacariu">
   <meta name="generator" content="Jekyll v4.1.1">
 
-  <title>Multi-Class Few-Shot Counting Dataset</title>
+  <title>ABC123</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="./bootstrap.min.css"
@@ -22,11 +22,6 @@
 
     <div class="title" style="text-align:center;">
       <h1>ABC Easy as 123: A Blind Counter for Exemplar-Free <br> Multi-Class Class-agnostic Counting
-
-      </h1>
-      <h2>&
-      </h2>
-      <h1>MCAC: A Multi-Class Class-Agnostic Counting Dataset
       </h1>
     </div>
 
@@ -41,7 +36,7 @@
     <div class="col text-center">
       <a class="btn btn-secondary" href="https://arxiv.org/abs/2309.04820" role="button">Paper</a>
       <a class="btn btn-secondary" href="https://github.com/ActiveVisionLab/ABC123" role="button">Code</a>
-      <a class="btn btn-secondary" href="https://github.com/ActiveVisionLab/ABC123" role="button">Dataset</a>
+      <a class="btn btn-secondary" href="https://MCAC.active.vision" role="button">Dataset</a>
 
     </div>
 
@@ -50,20 +45,29 @@
       Class-agnostic counting methods enumerate objects of an arbitrary class, providing tremendous utility in many
       fields.
       Prior works have limited usefulness as they require either a set of examples of the type to be counted or that the
-      image contains only a single type of object. A significant factor in these shortcomings is the lack of a dataset
-      to properly address counting in settings with more than one kind of object present.
+      query image contains only a single type of object. A significant factor in these shortcomings is the lack of a
+      dataset to properly address counting in settings with more than one kind of object present.
       To address these issues, we propose the first Multi-class, Class-Agnostic Counting dataset (MCAC) and A Blind
       Counter (ABC123), a method that can count multiple types of objects simultaneously without using examples of type
       during training or inference.
       ABC123 introduces a new paradigm where instead of requiring exemplars to guide the enumeration, examples are found
       after the counting stage to help a user understand the generated outputs.
-      We show that ABC123 outperforms contemporary methods on MCAC without the requirement of human in-the-loop
-      annotations. We also show that this performance transfers to FSC-147, the standard class-agnostic counting
-      dataset. </div>
+      We show that ABC123 outperforms contemporary methods on MCAC without needing human in-the-loop annotations. We
+      also show that this performance transfers to FSC-147, the standard class-agnostic counting dataset.</div>
 
     <br>
     <div style="text-align:center;">
-      <img src="./multi_class_files/ABC123_example_2534708946430548.png" style="width:100%">
+      <img src="./multi_class_files/found_bboxes_1991666512496129.png" style="width:100%">
+      <p class="bottom-three">     </p>
+      <img src="./multi_class_files/found_bboxes_2743168248170490.png" style="width:100%">
+      <p class="bottom-three">     </p>
+      <img src="./multi_class_files/found_bboxes_2751222122226916.png" style="width:100%">
+      <p class="bottom-three">     </p>
+      <img src="./multi_class_files/found_bboxes_2854740766783037.png" style="width:100%">
+      <p class="bottom-three">     </p>
+      <img src="./multi_class_files/found_bboxes_2041963832336316.png" style="width:100%">
+      <p class="bottom-three">     </p>
+      <img src="./multi_class_files/found_bboxes_742340842329572.png" style="width:100%">
       ABC123 enumerates instances of multiple types of objects simultaneously without needing exemplar images. Not only
       does ABC123 not require exemplar images, it finds examples of type to aid a user in understanding the types it has
       counted.
@@ -76,38 +80,14 @@
     <h2>MCAC </h2>
     <div style="text-align:center;">
       <img src="./multi_class_files/MCAC_example.png" style="width:100%">
-      <b>MCAC Example</b>. Each object in the RGB image has an associated: Model ID, Class ID, Center Coordinate,
-      Bounding Box and Occlusion
-      Percentage.
-      <p>
-        More examples can be seen <a href="MCAC_examples.html"> here.</a>
-      </p>
-
     </div>
     <br>
 
     <p>
-      This dataset is a set of synthetic images of objects for the purpose of multi-class few-shot or class-agnostic
-      counting.
-    </p>
-    <p>
-      The classes of objects present in the Train, Test and Val splits are mutually exclusive, and where possible
-      aligned with the class splits in <a href="https://github.com/ActiveVisionLab/LearningToCountAnything"> FSC-133</a>.
-    <p>
-      Models are taken from <a href="https://shapenet.org/"> ShapeNetSem</a>. The original model IDs and manually
-      verified category labels are preserved.
-
-    </p>
-
-    <ul>
-      <li><b>4756</b> Training images from <b>287</b> classes </li>
-      <li><b>2413</b> Validation images from <b>37</b> classes </li>
-      <li><b>2114</b> Testing images from <b>19</b> classes </li>
-      <li>Each object is labeled with an instance, class and model number as well as its center coordinate, bounding box
-        coordinates and its percentage occlusion</li>
-    </ul>
-
-    <br>
+      MCAC is the first multi-class class-agnostic counting dataset.
+      For details on MCAC see its 
+        <a href="https://MCAC.active.vision"> project page.</a>
+      </p>
 
     <h2>Benchmark Results</h2>
 
@@ -205,44 +185,24 @@
         <tr style="border-bottom:1px solid black">
           <td align="left">ABC123</td>
           <td align="center"> 0 </td>
-          <td align="center"> 8.96 </td>
-          <td align="center"> 15.93 </td>
-          <td align="center"> 0.29 </td>
-          <td align="center"> 2.02 </td>
-          <td align="center"> 9.52 </td>
-          <td align="center"> 17.64 </td>
-          <td align="center"> 0.28 </td>
-          <td align="center"> 2.23 </td>
+          <td align="center"> <b>8.96</b> </td>
+          <td align="center"> <b>15.93</b> </td>
+          <td align="center"> <b>0.29</b> </td>
+          <td align="center"> <b>2.02</b> </td>
+          <td align="center"> <b>9.52</b> </td>
+          <td align="center"> <b>17.64</b> </td>
+          <td align="center"> <b>0.28</b> </td>
+          <td align="center"> <b>2.23</b> </td>
         </tr>
         </tr>
       </tbody>
     </table>
 
-    <br>
-    <h2>File hierarchy</h2>
-    <pre>
-      ├── metadata
-      │   ├── generate_shapenetsem_split_new.ipynb
-      │   └── shapenetsem001_train_test_new.json
-      ├── test
-      ├── train
-      │   ├── 1511489148409439
-      │   ├── 3527550462177290
-      │   |   ├──img.png
-      │   |   ├──info.json
-      │   |   ├──seg.png
-      │   |   └──seginds
-      │   |      ├──0.png
-      │   |      ├──1.png
-      │   |      └── ...
-      │   ├──4109417696451021
-      │   └── ...
-      └── val
 </pre>
 
 
-    <h2 style="margin-top:0.75cm;">BibTeX</h2>
-    <pre>    @article{hobley2023abc,
+<h2 style="margin-top:0.75cm;">Citation</h2>
+  <pre>    @article{hobley2023abc,
         title={ABC Easy as 123: A Blind Counter for Exemplar-Free Multi-Class Class-agnostic Counting},
         author={Hobley, Michael and Prisacariu, Victor},
         journal={arXiv preprint arXiv:2309.04820},
