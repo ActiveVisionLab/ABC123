@@ -1,0 +1,51 @@
+---
+seed: -1
+dataset: MCAC
+data_path: "PATH/TO/MCAC/"
+log_dir: logs/
+resume_path: "" 
+find_unused_parameters: False
+
+
+MCAC_occ_limit: -1
+MCAC_crop_size: -1
+MCAC_max_num_classes: 5
+MCAC_max_number_per_type: 300
+MCAC_exclude_imgs_with_counts_over: -1 # no images with counts over the amount, -1 is the no excclusion case
+MCAC_exclude_imgs_with_num_classes_over: -1 # no images with number of classes over the amount, -1 is the no excclusion case
+
+img_channels: 3
+img_size: [224, 224]
+image_transforms: None 
+drop_last: True 
+
+counting_backbone_pretrained: True # if using pretrained vakues (only a thing for dino)
+counting_backbone_unfreeze_layers: -1
+counting_head: "5_32" # linearprobe
+upsample_padding_mode: 'replicate' # 'zeros', 'reflect', 'replicate'
+
+
+matching_type: no_match # no_match, count, density
+normalize_matching: False #  ONLY APPLIES TO DENSITY MATCHING
+matcher_cost_p_norm: 1 
+matcher_cost_power: 1 
+
+counting_loss: pixelwise_mae
+gtd_scale: 1
+
+learning_rate: 3e-4
+scheduler: None
+weight_decay: 0
+scheduler_steps: 100
+scheduler_gamma: 0.5
+accumulate_grad_batches: 1
+
+train_batch_size: 32
+eval_batch_size: 32
+num_workers: 4
+
+num_sanity_val_steps: -1 
+
+val_every: 1
+max_epochs: 10000
+max_steps: -1

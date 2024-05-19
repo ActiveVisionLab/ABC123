@@ -1,0 +1,42 @@
+seed: -1
+dataset: MCAC
+test_split: val
+
+MCAC_crop_size: 672
+MCAC_occ_limit: 70
+img_channels: 3
+image_transforms: ref_rot 
+
+counting_backbone: "vit_dino"
+counting_backbone_unfreeze_layers: -1
+
+counting_head: "5_32"
+upsample_padding_mode: 'replicate' # 'zeros', 'reflect', 'replicate'
+
+
+matching_type: density # no_match, count, density
+matcher_cost_power: 2
+normalize_matching: True
+
+counting_loss: pixelwise_mae
+gtd_scale: 400
+
+
+learning_rate: 3e-5
+scheduler: StepLR
+scheduler_steps: 35
+scheduler_gamma: 0.5
+weight_decay: 0
+
+train_batch_size: 2
+eval_batch_size: 2
+val_every: 1
+
+
+max_epochs: 150
+
+
+
+
+
+
