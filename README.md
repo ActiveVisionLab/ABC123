@@ -62,7 +62,7 @@ python main.py --config ABC123testM1;
 @article{hobley2023abc,
     title={ABC Easy as 123: A Blind Counter for Exemplar-Free Multi-Class Class-agnostic Counting}, 
     author={Michael A. Hobley and Victor A. Prisacariu},
-    journal={arXiv preprint arXiv:2309.04820},
-    year={2023},
+    journal={Proceedings of the European Conference on Computer Vision},
+    year={2024},
 }
 ```
